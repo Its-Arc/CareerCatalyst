@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4F46E5;
+  --color-accent: #14B8A6;
+}
+
+body {
+  @apply bg-white text-gray-900 font-sans antialiased;
+}
