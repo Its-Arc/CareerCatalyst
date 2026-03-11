@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     <Link to="/" className="flex items-center text-xl font-bold tracking-tight">
-                        <span className="text-accent mr-1">vidya</span>mitra
+                        <span className="text-accent mr-1">Career</span>Catalyst
                     </Link>
 
                     <div className="hidden md:flex space-x-1 overflow-x-auto">
