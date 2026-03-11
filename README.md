@@ -32,7 +32,7 @@ CareerCatalyst is an intelligent web application designed to help job seekers an
 
 1. Clone the repository: 
    ```bash
-   git clone https://github.com/yourusername/careercatalyst.git
+   git clone https://github.com/Its-Arc/CareerCatalyst.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -50,6 +50,3 @@ CareerCatalyst is an intelligent web application designed to help job seekers an
    ```bash
    npm run dev
    ```
-
-## 🤝 Contributing
-Contributions are welcome! Feel free to open an issue or submit a pull request if you'd like to improve the project.
