@@ -7,12 +7,12 @@ export default function Settings() {
     const [toast, setToast] = useState(false);
 
     useEffect(() => {
-        const saved = localStorage.getItem('vidyamitra_api_key');
+        const saved = localStorage.getItem('careercatalyst_api_key');
         if (saved) setApiKey(saved);
     }, []);
 
     const handleSave = () => {
-        localStorage.setItem('vidyamitra_api_key', apiKey.trim());
+        localStorage.setItem('careercatalyst_api_key', apiKey.trim());
         setToast(true);
         setTimeout(() => setToast(false), 3000);
     };
@@ -26,7 +26,7 @@ export default function Settings() {
                 </div>
 
                 <p className="text-gray-600 mb-6">
-                    VidyaMitra runs securely in your browser and requires an Anthropic API Key to power its AI features.
+                    careercatalyst runs securely in your browser and requires an Anthropic API Key to power its AI features.
                     Your key is saved locally in your browser and is never stored on our servers.
                 </p>
 

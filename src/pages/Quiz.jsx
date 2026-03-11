@@ -87,8 +87,8 @@ Return ONLY the JSON.`;
             badge
         };
 
-        const prevHistory = JSON.parse(localStorage.getItem('vidyamitra_quiz_history') || '[]');
-        localStorage.setItem('vidyamitra_quiz_history', JSON.stringify([...prevHistory, historyRecord]));
+        const prevHistory = JSON.parse(localStorage.getItem('careercatalyst_quiz_history') || '[]');
+        localStorage.setItem('careercatalyst_quiz_history', JSON.stringify([...prevHistory, historyRecord]));
     };
 
     if (quizFinished) {

@@ -9,7 +9,7 @@ export default function Plan() {
     const [expandedWeek, setExpandedWeek] = useState(1);
 
     useEffect(() => {
-        const saved = localStorage.getItem('vidyamitra_plan');
+        const saved = localStorage.getItem('careercatalyst_plan');
         if (saved) {
             try {
                 setPlan(JSON.parse(saved));
@@ -20,8 +20,8 @@ export default function Plan() {
     }, []);
 
     const generatePlan = async () => {
-        const resumeStr = localStorage.getItem('vidyamitra_resume');
-        const careerStr = localStorage.getItem('vidyamitra_career');
+        const resumeStr = localStorage.getItem('careercatalyst_resume');
+        const careerStr = localStorage.getItem('careercatalyst_career');
 
         if (!resumeStr || !careerStr) {
             setError("Please complete Resume Analysis and Domain Selection first.");
@@ -50,7 +50,7 @@ Return ONLY the JSON.`;
             const resp = await callClaude(prompt, "Please generate my personalized 12-week plan.");
             const parsed = parseJSONResponse(resp);
             setPlan(parsed);
-            localStorage.setItem('vidyamitra_plan', JSON.stringify(parsed));
+            localStorage.setItem('careercatalyst_plan', JSON.stringify(parsed));
             setExpandedWeek(1);
         } catch (err) {
             setError(err.message || "Failed to generate plan.");

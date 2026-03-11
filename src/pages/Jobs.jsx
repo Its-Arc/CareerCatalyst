@@ -12,8 +12,8 @@ export default function Jobs() {
     }, []);
 
     const fetchJobs = async () => {
-        const resumeStr = localStorage.getItem('vidyamitra_resume');
-        const careerStr = localStorage.getItem('vidyamitra_career');
+        const resumeStr = localStorage.getItem('careercatalyst_resume');
+        const careerStr = localStorage.getItem('careercatalyst_career');
 
         if (!resumeStr || !careerStr) {
             setError("Please complete Resume Analysis and Domain Selection first.");

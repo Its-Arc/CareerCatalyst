@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center justify-center py-12 text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-                VidyaMitra &ndash; Your AI Career Mentor
+                CareerCatalyst &ndash; Your AI Career Mentor
             </h1>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl">
                 Level up your career with AI-driven resume analysis, personalized learning plans, and intelligent mock interviews.

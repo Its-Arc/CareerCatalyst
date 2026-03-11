@@ -9,27 +9,27 @@ export default function Progress() {
 
     useEffect(() => {
         // Load local storage histories
-        const savedQuizzes = JSON.parse(localStorage.getItem('vidyamitra_quiz_history') || '[]');
+        const savedQuizzes = JSON.parse(localStorage.getItem('careercatalyst_quiz_history') || '[]');
         setQuizzes(savedQuizzes);
 
-        const savedInterviews = JSON.parse(localStorage.getItem('vidyamitra_interview_history') || '[]');
+        const savedInterviews = JSON.parse(localStorage.getItem('careercatalyst_interview_history') || '[]');
         setInterviews(savedInterviews);
 
-        const savedPlan = localStorage.getItem('vidyamitra_plan');
+        const savedPlan = localStorage.getItem('careercatalyst_plan');
         if (savedPlan) {
             try {
                 setPlan(JSON.parse(savedPlan));
             } catch (e) { }
         }
 
-        const savedProgress = JSON.parse(localStorage.getItem('vidyamitra_plan_progress') || '{}');
+        const savedProgress = JSON.parse(localStorage.getItem('careercatalyst_plan_progress') || '{}');
         setPlanProgress(savedProgress);
     }, []);
 
     const toggleWeek = (weekNum) => {
         const nextProg = { ...planProgress, [weekNum]: !planProgress[weekNum] };
         setPlanProgress(nextProg);
-        localStorage.setItem('vidyamitra_plan_progress', JSON.stringify(nextProg));
+        localStorage.setItem('careercatalyst_plan_progress', JSON.stringify(nextProg));
     };
 
     // Calculate stats for chart

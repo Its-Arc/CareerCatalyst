@@ -21,7 +21,7 @@ export default function Domain() {
     const [customRole, setCustomRole] = useState('');
 
     useEffect(() => {
-        const saved = localStorage.getItem('vidyamitra_career');
+        const saved = localStorage.getItem('careercatalyst_career');
         if (saved) {
             try {
                 const parsed = JSON.parse(saved);
@@ -42,7 +42,7 @@ export default function Domain() {
         const finalRole = jobRole === 'Custom' ? customRole : jobRole;
         if (!domain || !finalRole) return;
 
-        localStorage.setItem('vidyamitra_career', JSON.stringify({
+        localStorage.setItem('careercatalyst_career', JSON.stringify({
             domain,
             jobRole: finalRole
         }));

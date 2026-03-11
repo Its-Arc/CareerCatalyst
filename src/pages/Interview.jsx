@@ -16,7 +16,7 @@ export default function Interview() {
     const [finalReport, setFinalReport] = useState(null);
 
     useEffect(() => {
-        const savedCareer = localStorage.getItem('vidyamitra_career');
+        const savedCareer = localStorage.getItem('careercatalyst_career');
         if (savedCareer) {
             try {
                 const parsed = JSON.parse(savedCareer);
@@ -147,8 +147,8 @@ Return ONLY the JSON.`;
             setFinalReport(report);
             setInterviewCompleted(true);
 
-            const prevHistory = JSON.parse(localStorage.getItem('vidyamitra_interview_history') || '[]');
-            localStorage.setItem('vidyamitra_interview_history', JSON.stringify([...prevHistory, report]));
+            const prevHistory = JSON.parse(localStorage.getItem('careercatalyst_interview_history') || '[]');
+            localStorage.setItem('careercatalyst_interview_history', JSON.stringify([...prevHistory, report]));
 
         } catch (err) {
             setError("Failed to generate final report. Your progress is saved.");

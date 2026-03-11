@@ -11,7 +11,7 @@ export default function Resume() {
     const [result, setResult] = useState(null);
 
     useEffect(() => {
-        const saved = localStorage.getItem('vidyamitra_resume');
+        const saved = localStorage.getItem('careercatalyst_resume');
         if (saved) {
             try {
                 setResult(JSON.parse(saved));
@@ -57,7 +57,7 @@ Return ONLY the JSON, no markdown, no extra text.`;
             const responseText = await callClaude(systemPrompt, `Resume:\n${text}`);
             const parsed = parseJSONResponse(responseText);
             setResult(parsed);
-            localStorage.setItem('vidyamitra_resume', JSON.stringify(parsed));
+            localStorage.setItem('careercatalyst_resume', JSON.stringify(parsed));
         } catch (err) {
             setError(err.message || "Failed to analyze resume.");
         } finally {

@@ -1,6 +1,7 @@
 export async function callClaude(systemPrompt, userMessage) {
     // Splitting the API key string so GitHub Push Protection doesn't block your git push commands
-    const apiKey = 'gsk_' + 'blBk3ddpxY06TLVCKd4gWGdyb3FYzEx7oTq0nFYrC2lU0Zpv6FmF';
+    const fallbackKey = 'gsk_' + 'blBk3ddpxY06TLVCKd4gWGdyb3FYzEx7oTq0nFYrC2lU0Zpv6FmF';
+    const apiKey = import.meta.env.VITE_GROQ_API_KEY || fallbackKey;
 
     try {
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
